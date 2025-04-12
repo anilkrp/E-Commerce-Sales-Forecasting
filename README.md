@@ -1,38 +1,89 @@
-# E-Commerce Sales Forecasting
 
-Hey! I’m Anil Kumar Raigar, and this is my sales forecasting project! It’s all in one Jupyter Notebook (`ecommerce_sales_forecasting.ipynb`). I made it to predict sales for an online store, and it’s tied to my CV where I made inventory planning 30% better.
+# 🛍️ E-Commerce Sales Forecasting & BI Dashboard
 
-## What’s Inside?
+Hey! I’m **Anil Kumar Raigar**, and this is my end-to-end **E-Commerce Sales Forecasting and Analysis** project. It combines **Python**, **SQL**, and **Power BI** to explore, predict, and visualize sales performance.
 
-I made 5 years of fake sales data (`ecommerce_sales_extended.csv`) for 10 products—like gadgets, clothes, and home stuff. In the notebook, I:
-- Built the data from scratch.
-- Drew charts to see what’s up with the sales.
-- Guessed future sales with 4 models.
+> 🎯 This project helped improve inventory planning accuracy by **30%**, and it’s featured in my CV!
 
-Here’s how they did (error is how off the guesses are):
-- Linear Regression: 3.80
-- XGBoost: 3.83
-- Random Forest: 3.79 (best one!)
-- LightGBM: 3.83
+---
 
-They’re all super close (3.79–3.83), so they work great!
+## 📦 What's Inside?
 
-## Cool Stuff I Made
+### 🔢 **Data**
+I created **5 years of synthetic sales data** (`ecommerce_sales_extended.csv`) for 10 popular product categories like gadgets, clothing, and home essentials.
 
-- **Charts**: In `visualizations/`—sales over time, by category, by region, monthly trends, real vs. guessed sales, and more!
-- **Predictions**: 30-day guesses in files like `sales_forecast_random_forest.csv`.
-- **Scores**: Check `model_metrics.txt` for how the models did.
+---
 
-## How to Use It
+### 🧠 **Forecasting (Python / Jupyter)**
+The core logic is in the notebook `ecommerce_sales_forecasting.ipynb`, where I:
+- Built the sales dataset from scratch.
+- Explored the data with visualizations.
+- Trained and evaluated 4 machine learning models for sales forecasting.
 
-Run `ecommerce_sales_forecasting.ipynb` in Jupyter (needs Python, Pandas, Scikit-learn). Load the CSVs and pics into Power BI for a dashboard! It’s all there—data, code, and pics.
+#### 📈 Forecasting Models & Performance (MAE):
+| Model            | MAE  |
+|------------------|------|
+| Linear Regression| 3.80 |
+| XGBoost          | 3.83 |
+| Random Forest    | **3.79** ✅ Best |
+| LightGBM         | 3.83 |
 
-## Files
+---
 
-- `ecommerce_sales_extended.csv`: The sales data.
-- `ecommerce_sales_forecasting.ipynb`: All my code.
-- `visualizations/`: Pics like `sales_trend.png`.
-- `sales_forecast_*.csv`: Predictions.
-- `model_metrics.txt`: Model scores.
+## 📊 **Business Intelligence Dashboard (Power BI)**
 
-Hope you like it!
+I designed a fully interactive **Power BI dashboard** using the same dataset. The dashboard features:
+
+- 📅 **Sales trends** over time (daily, monthly, yearly)
+- 🌍 **Regional analysis** (Top region by sales, profit, revenue)
+- 🛒 **Category-level insights**
+- 💸 **Profit & Revenue KPIs**
+- 📉 **Discount tracking**
+- 🏷️ **Promo sales days analysis**
+- 📆 **Day of week patterns** with slicers for dynamic filtering
+
+📄 View the dashboard:
+> **[`powerbi dashboard.pdf`](./powerbi%20dashboard.pdf)**
+
+---
+
+## 🧮 **Data Analysis in SQL**
+
+Using MySQL, I also performed structured queries and aggregations to:
+- Track **total revenue, profit, and discount** trends
+- Find **top-performing products and categories**
+- Detect **seasonal peaks**
+- Filter and aggregate by **regions, categories, and time**
+
+📁 SQL logic is in:
+> **[`sales_data.session.sql`](./sales_data.session.sql)**
+
+---
+
+## 🔍 Folder Structure
+
+```
+📁 visualizations/                  # All charts and plots used
+📄 ecommerce_sales_extended.csv     # The synthetic dataset
+📘 ecommerce_sales_forecasting.ipynb # Jupyter notebook with ML models
+📑 model_metrics.txt               # Error scores for each model
+📄 powerbi dashboard.pdf            # Final Power BI visual report
+📄 sales_data.session.sql           # SQL queries used for analysis
+📄 sales_forecast_*.csv             # 30-day forecast predictions
+```
+
+---
+
+## 🚀 How to Run
+
+1. Launch Jupyter and open `ecommerce_sales_forecasting.ipynb`.
+2. Run all cells to build the dataset, train models, and save outputs.
+3. Open `powerbi dashboard.pdf` for insights, or import CSVs into Power BI for a live dashboard.
+4. Load `sales_data.session.sql` in MySQL Workbench to explore raw SQL queries.
+
+---
+
+## 💬 Let’s Connect
+
+Like it? Found it useful?  
+Feel free to **connect or reach out** — I’m always up for collaboration or feedback!
